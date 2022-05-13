@@ -17,8 +17,4 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Mohammed H. AlSharif received the B.S. degree in electrical engineering (with first class Hons.) from the King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia, in 2012, the M.S. and the Ph.D. degree in 2016 and 2021, respectively, in electrical engineering from the King Abdullah University of Science and Technology, Thuwal, Saudi Arabia. In 2020 for nine months, he was a Visiting Scholar with the California Institute of Technology, Pasadena, CA, USA. His current research interests include signal processing, signal design, and machine learning with applications in indoor localization, motion tracking and hand gesture recognition. Currently, he is a research engineer in the research and development center in Saudi Aramco.

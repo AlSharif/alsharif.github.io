@@ -645,6 +645,34 @@
     max-width: 280px;
   }
 }
+
+/* Publication Links */
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 14px;
+}
+
+.pub-links a {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--forest-light);
+  text-decoration: none;
+  border-bottom: 1px solid var(--copper);
+  padding-bottom: 3px;
+  transition: color 0.2s;
+}
+
+.pub-links a:hover {
+  color: var(--copper);
+}
+
+.publication strong {
+  color: var(--forest);
+  font-weight: 700;
+}
   </style>
 </head>
 
@@ -931,90 +959,261 @@
       </div>
     </section>
 
-    <!-- Publications -->
 
-    <section class="content-section" id="publications">
-      <div class="container">
+<!-- Publications -->
 
-        <div class="section-header">
-          <div class="eyebrow">03 / Publications</div>
-          <h2>Selected scholarly work.</h2>
-          <p>
-            Research contributions spanning geometric
-            estimation, sensor fusion, and localization.
-            Full bibliographic details and publication
-            links can be added as they are verified.
-          </p>
-        </div>
+<section class="content-section" id="publications">
+  <div class="container">
 
-        <div class="publication">
-          <div class="pub-year">2025</div>
-          <div>
-            <h3>
-              Kalman Filtering for Indoor Pose Estimation
-              on Riemannian Manifolds Using IMU and Acoustics
-            </h3>
-            <p>EUSIPCO 2025</p>
-            <span class="pub-tag">Conference Paper</span>
-          </div>
-        </div>
+    <div class="section-header">
+      <div class="eyebrow">03 / Publications</div>
 
-        <div class="publication">
-          <div class="pub-year">Research</div>
-          <div>
-            <h3>
-              Kalman Filtering for Precise Indoor Position
-              and Orientation Estimation Using IMU and
-              Acoustics on Riemannian Manifolds
-            </h3>
-            <p>
-              Research manuscript on geometry-aware
-              multi-sensor state estimation.
-            </p>
-            <span class="pub-tag">Manuscript</span>
-          </div>
-        </div>
+      <h2>Selected scholarly work.</h2>
 
-        <div class="publication">
-          <div class="pub-year">Ongoing</div>
-          <div>
-            <h3>
-              Kalman Filtering for Sensor Fusion with
-              Constrained State Variables via
-              Riemannian Optimization
-            </h3>
-            <p>
-              Investigation of constrained filtering
-              using the geometric structure of state spaces.
-            </p>
-            <span class="pub-tag">Research Direction</span>
-          </div>
-        </div>
+      <p>
+        My publications span Riemannian optimization,
+        geometric state estimation, acoustic sensing,
+        and high-accuracy localization.
+      </p>
+    </div>
 
-        <div class="publication">
-          <div class="pub-year">Ongoing</div>
-          <div>
-            <h3>
-              Cramér–Rao Bounds for Range Estimation
-              Using Discrete-Time Codes
-            </h3>
-            <p>
-              Statistical performance analysis
-              of coded ranging systems.
-            </p>
-            <span class="pub-tag">Research Direction</span>
-          </div>
-        </div>
+    <!-- 2025 EUSIPCO -->
 
-        <p style="font-size:12px;margin-top:25px;">
-          Note: This is a selected research overview,
-          not an exhaustive bibliographic record.
-          Publication statuses should be updated
-          before public release.
+    <div class="publication">
+      <div class="pub-year">2025</div>
+      <div>
+        <h3>
+          Kalman Filtering for Indoor Pose Estimation
+          on Riemannian Manifolds Using IMU and Acoustics
+        </h3>
+
+        <p>
+          <strong>Mohammed H. AlSharif</strong>,
+          Mohanad Ahmed, Mohamed Siala,
+          Tareq Y. Al-Naffouri
         </p>
 
+        <p>
+          33rd European Signal Processing Conference
+          (EUSIPCO), pp. 2147–2151, 2025.
+        </p>
+
+        <span class="pub-tag">Conference Paper</span>
+
+        <div class="pub-links">
+          <a href="https://doi.org/10.23919/EUSIPCO63237.2025.11226421"
+             target="_blank" rel="noopener noreferrer">
+            Paper &rarr;
+          </a>
+
+          <a href="https://eusipco2025.org/wp-content/uploads/pdfs/0002147.pdf"
+             target="_blank" rel="noopener noreferrer">
+            PDF &rarr;
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
+
+    <!-- 2021 IEEE TSP -->
+
+    <div class="publication">
+      <div class="pub-year">2021</div>
+      <div>
+        <h3>
+          Manifold Optimization for High-Accuracy
+          Spatial Location Estimation Using Ultrasound Waves
+        </h3>
+
+        <p>
+          <strong>Mohammed H. AlSharif</strong>,
+          Ahmed Douik, Mohanad Ahmed,
+          Tareq Y. Al-Naffouri, Babak Hassibi
+        </p>
+
+        <p>
+          IEEE Transactions on Signal Processing,
+          vol. 69, pp. 5078–5093, 2021.
+        </p>
+
+        <span class="pub-tag">Journal Paper</span>
+
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/TSP.2021.3109792"
+             target="_blank" rel="noopener noreferrer">
+            Paper &rarr;
+          </a>
+
+          <a href="https://authors.library.caltech.edu/records/gsxyg-y9782"
+             target="_blank" rel="noopener noreferrer">
+            Caltech Repository &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2021 IEEE TIM -->
+
+    <div class="publication">
+      <div class="pub-year">2021</div>
+      <div>
+        <h3>
+          Range Estimation of a Moving Target Using
+          Ultrasound Differential Zadoff–Chu Codes
+        </h3>
+
+        <p>
+          <strong>Mohammed H. AlSharif</strong>,
+          Mohamed Saad, Mohamed Siala,
+          Mohanad Ahmed, Tareq Y. Al-Naffouri
+        </p>
+
+        <p>
+          IEEE Transactions on Instrumentation and
+          Measurement, vol. 70, pp. 1–15, 2021.
+        </p>
+
+        <span class="pub-tag">Journal Paper</span>
+
+        <div class="pub-links">
+          <a href="https://doi.org/10.1109/TIM.2021.3072691"
+             target="_blank" rel="noopener noreferrer">
+            Paper &rarr;
+          </a>
+
+          <a href="https://arxiv.org/abs/2102.05436"
+             target="_blank" rel="noopener noreferrer">
+            arXiv &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2017 EUSIPCO -->
+
+    <div class="publication">
+      <div class="pub-year">2017</div>
+      <div>
+        <h3>
+          Zadoff-Chu Coded Ultrasonic Signal
+          for Accurate Range Estimation
+        </h3>
+
+        <p>
+          <strong>Mohammed H. AlSharif</strong>,
+          Mohamed Saad, Mohamed Siala, Tarig Ballal,
+          Hatem Boujemaa, Tareq Y. Al-Naffouri
+        </p>
+
+        <p>
+          25th European Signal Processing Conference
+          (EUSIPCO), pp. 1250–1254, 2017.
+        </p>
+
+        <span class="pub-tag">Conference Paper</span>
+
+        <div class="pub-links">
+          <a href="https://doi.org/10.23919/EUSIPCO.2017.8081408"
+             target="_blank" rel="noopener noreferrer">
+            Paper &rarr;
+          </a>
+
+          <a href="https://www.eurasip.org/Proceedings/Eusipco/Eusipco2017/papers/1570347827.pdf"
+             target="_blank" rel="noopener noreferrer">
+            PDF &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2017 Hand Gesture Recognition -->
+
+    <div class="publication">
+      <div class="pub-year">2017</div>
+      <div>
+        <h3>
+          Hand Gesture Recognition Using Ultrasonic Waves
+        </h3>
+
+        <p>
+          <strong>Mohammed H. AlSharif</strong>,
+          Mohamed Saad
+        </p>
+
+        <p>
+          IEEE ICASSP Student Forum, 2017.
+        </p>
+
+        <span class="pub-tag">Student Forum Paper</span>
+
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/1710.08623"
+             target="_blank" rel="noopener noreferrer">
+            arXiv &rarr;
+          </a>
+
+          <a href="https://dihana.cps.unizar.es/proceedings/ICASSP/2017/StudentForum/4256.pdf"
+             target="_blank" rel="noopener noreferrer">
+            PDF &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preprint -->
+
+    <h3 style="margin-top:45px;margin-bottom:20px;
+               font-family:Georgia,serif;
+               font-size:26px;color:var(--forest);">
+      Preprints
+    </h3>
+
+    <div class="publication">
+      <div class="pub-year">2024</div>
+      <div>
+        <h3>
+          Kalman Filtering for Precise Indoor Position
+          and Orientation Estimation Using IMU and
+          Acoustics on Riemannian Manifolds
+        </h3>
+
+        <p>
+          <strong>Mohammed H. AlSharif</strong>,
+          Mohanad Ahmed, Mohamed Siala,
+          Tareq Y. Al-Naffouri
+        </p>
+
+        <p>
+          arXiv:2409.01002, 2024.
+        </p>
+
+        <span class="pub-tag">Preprint</span>
+
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2409.01002"
+             target="_blank" rel="noopener noreferrer">
+            arXiv &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Scholar -->
+
+    <div style="margin-top:40px;">
+      <a
+        class="btn"
+        href="https://scholar.google.com/citations?user=Onv0zwkAAAAJ"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="background:var(--forest);
+               color:white;">
+        View Google Scholar Profile &rarr;
+      </a>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Experience -->
 

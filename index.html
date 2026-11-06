@@ -1,0 +1,1295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mohammed AlSharif — Researcher in AI for Autonomous Systems, Localization, Sensor Fusion, and Riemannian Optimization.">
+  <meta name="theme-color" content="#102c29">
+  <title>Mohammed AlSharif | Researcher</title>
+
+  <style>
+    :root {
+      --bg: #f8f7f2;
+      --paper: #ffffff;
+      --forest: #102c29;
+      --forest-light: #214740;
+      --copper: #bd8350;
+      --text: #202b29;
+      --muted: #687571;
+      --border: #e2e6df;
+      --pale: #edf1eb;
+      --max: 1120px;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button { font: inherit; }
+
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--copper);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 48px));
+      margin: auto;
+    }
+
+    .serif {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 11px;
+      font-weight: 750;
+      color: var(--copper);
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      letter-spacing: -1.3px;
+    }
+
+    h1 { font-size: clamp(45px, 6vw, 78px); line-height: 1.1; }
+    h2 { font-size: clamp(32px, 4vw, 49px); line-height: 1.2; }
+    h3 { font-size: 19px; line-height: 1.35; }
+    p { color: var(--muted); }
+
+    /* Navigation */
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 75px;
+      background: rgba(248,247,242,.96);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-weight: 700;
+      font-size: 23px;
+      color: var(--forest);
+      letter-spacing: -.8px;
+    }
+
+    .logo span { color: var(--copper); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      color: var(--forest);
+      font-size: 12px;
+      font-weight: 650;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--copper); }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 27px;
+      color: var(--forest);
+      cursor: pointer;
+    }
+
+    /* Hero */
+
+    .hero {
+      background: var(--forest);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      min-height: 620px;
+      gap: 36px;
+      padding: 90px 0;
+    }
+
+    .hero h1 {
+      margin: 20px 0 25px;
+      color: white;
+    }
+
+    .hero h1 em {
+      color: #cda477;
+      font-weight: 400;
+    }
+
+    .hero p {
+      color: #c5d1cd;
+      max-width: 580px;
+      font-size: 16px;
+    }
+
+    .hero .eyebrow { color: #d2a573; }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid #44615a;
+      border-radius: 30px;
+      padding: 8px 15px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #e5ede8;
+    }
+
+    .hero-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #cda477;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 23px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 750;
+      letter-spacing: .3px;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: var(--forest);
+      background: #d4a777;
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid #668078;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,.08);
+    }
+
+    .hero-art {
+      width: 100%;
+      max-width: 490px;
+      margin: auto;
+      display: block;
+    }
+
+    /* Shared sections */
+
+    section.content-section {
+      padding: 100px 0;
+      scroll-margin-top: 75px;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+
+    .section-header h2 { margin: 12px 0 16px; }
+    .section-header p { font-size: 15px; }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.5fr .8fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      font-size: 16px;
+      line-height: 1.9;
+      margin-bottom: 19px;
+    }
+
+    .about-copy strong { color: var(--forest); }
+
+    .profile-card {
+      background: var(--paper);
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .profile-card h3 {
+      font-family: Georgia, serif;
+      margin-bottom: 22px;
+    }
+
+    .profile-row {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .profile-row:last-child { border: 0; }
+
+    .profile-row small {
+      display: block;
+      color: var(--copper);
+      font-size: 10px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      margin-bottom: 4px;
+    }
+
+    .profile-row span {
+      font-size: 13px;
+      font-weight: 550;
+      color: var(--forest);
+    }
+
+    /* Research */
+
+    .soft-section {
+      background: var(--pale);
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .research-card {
+      background: var(--paper);
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: var(--radius);
+      min-height: 280px;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .research-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,.045);
+    }
+
+    .card-number {
+      font-family: Georgia, serif;
+      color: var(--copper);
+      font-size: 23px;
+      margin-bottom: 32px;
+    }
+
+    .research-card h3 {
+      color: var(--forest);
+      margin-bottom: 13px;
+    }
+
+    .research-card p {
+      font-size: 13px;
+      line-height: 1.85;
+      margin: 0;
+    }
+
+    .research-note {
+      margin-top: 40px;
+      padding: 30px 35px;
+      background: var(--forest);
+      border-radius: var(--radius);
+      color: white;
+    }
+
+    .research-note p {
+      color: #cfdbd6;
+      margin-bottom: 0;
+      font-size: 14px;
+      max-width: 880px;
+    }
+
+    /* Publications */
+
+    .publication {
+      display: grid;
+      grid-template-columns: 65px 1fr;
+      gap: 22px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .publication:first-child { border-top: 1px solid var(--border); }
+
+    .pub-year {
+      font-family: Georgia, serif;
+      font-size: 18px;
+      color: var(--copper);
+      padding-top: 2px;
+    }
+
+    .publication h3 {
+      margin: 0 0 8px;
+      color: var(--forest);
+      font-size: 17px;
+    }
+
+    .publication p {
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+
+    .pub-tag {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 4px 10px;
+      margin-top: 9px;
+      color: var(--forest-light);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    /* Timeline */
+
+    .timeline {
+      position: relative;
+      margin-left: 8px;
+      border-left: 1px solid #cdd8cf;
+      padding-left: 35px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 45px;
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -41px;
+      top: 5px;
+      width: 11px;
+      height: 11px;
+      background: var(--copper);
+      border: 3px solid var(--pale);
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--copper);
+      margin-bottom: 7px;
+    }
+
+    .timeline-item h3 { margin-bottom: 5px; }
+
+    .timeline-org {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--forest-light);
+      margin-bottom: 10px;
+    }
+
+    .timeline-item p {
+      font-size: 13px;
+      max-width: 750px;
+      margin: 0;
+    }
+
+    /* Teaching */
+
+    .teaching-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .course-block {
+      background: var(--forest);
+      padding: 38px;
+      color: white;
+      border-radius: var(--radius);
+    }
+
+    .course-block h3 {
+      font-family: Georgia, serif;
+      font-size: 27px;
+      line-height: 1.3;
+      margin: 15px 0 18px;
+    }
+
+    .course-block p { color: #c4d2cc; font-size: 14px; }
+
+    .course-detail {
+      background: white;
+      padding: 38px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .course-detail h3 { color: var(--forest); }
+
+    .topic-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 22px 0;
+    }
+
+    .topic {
+      background: var(--pale);
+      color: var(--forest-light);
+      padding: 7px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 650;
+    }
+
+    .course-detail p { font-size: 13px; }
+
+    /* Contact */
+
+    .contact-section {
+      background: var(--forest);
+      color: white;
+      padding: 90px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .contact-section h2 {
+      margin: 10px 0 20px;
+      color: white;
+    }
+
+    .contact-section p {
+      color: #c4d3cd;
+      max-width: 590px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .contact-link {
+      color: #e8eee9;
+      font-size: 13px;
+      padding: 13px 0;
+      border-bottom: 1px solid #3e5b54;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-link:hover { color: #d4a777; }
+
+    footer {
+      padding: 25px 0;
+      background: #0b211e;
+      color: #aabbb5;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 11px;
+    }
+
+    /* Responsive layout */
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-art { max-width: 390px; }
+      .research-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { gap: 35px; }
+    }
+
+    @media (max-width: 700px) {
+      .container { width: min(100% - 32px, var(--max)); }
+      .nav { height: 66px; }
+
+      .menu-button { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 20px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .nav-links.open { display: flex; }
+
+      .hero-grid { padding: 70px 0 45px; min-height: 0; }
+      .hero-art { max-width: 300px; }
+      .hero p { font-size: 14px; }
+
+      section.content-section { padding: 70px 0; }
+
+      .about-grid, .teaching-grid,
+      .contact-grid, .research-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .publication { grid-template-columns: 1fr; gap: 3px; }
+      .research-card { min-height: 0; }
+      .research-note { padding: 25px; }
+      .course-block, .course-detail { padding: 27px; }
+      .contact-section { padding: 70px 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: 0s !important;
+        animation-duration: 0s !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#home">
+        M<span>.</span>AlSharif
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        &#9776;
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="hero-label">
+            POSTDOCTORAL SCHOLAR AT CALTECH
+          </div>
+
+          <h1>
+            Mohammed<br>
+            <em>AlSharif.</em>
+          </h1>
+
+          <div class="eyebrow">
+            AI &bull; Robotics &bull; Geometric Optimization
+          </div>
+
+          <p style="margin-top:25px;">
+            I develop mathematical and learning-based methods
+            that enable autonomous systems to perceive,
+            localize, and navigate reliably in challenging
+            environments.
+          </p>
+
+          <p>
+            My research bridges signal processing,
+            sensor fusion, Riemannian geometry, and
+            artificial intelligence.
+          </p>
+
+          <div class="buttons">
+            <a class="btn btn-primary" href="#research">
+              Explore My Research &nbsp; &#8594;
+            </a>
+            <a class="btn btn-outline" href="#contact">
+              Get in Touch
+            </a>
+          </div>
+        </div>
+
+        <!-- Custom mathematical illustration -->
+        <svg class="hero-art"
+             viewBox="0 0 500 500"
+             role="img"
+             aria-label="Abstract geometric manifold and localization illustration"
+             xmlns="http://www.w3.org/2000/svg">
+
+          <defs>
+            <radialGradient id="glow">
+              <stop offset="0%" stop-color="#63897a" stop-opacity=".27"/>
+              <stop offset="100%" stop-color="#102c29" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+
+          <circle cx="250" cy="250" r="230" fill="url(#glow)"/>
+
+          <g fill="none" stroke="#8bb0a2" stroke-opacity=".26" stroke-width="1">
+            <ellipse cx="250" cy="250" rx="180" ry="75"
+                     transform="rotate(-35 250 250)"/>
+            <ellipse cx="250" cy="250" rx="180" ry="75"
+                     transform="rotate(35 250 250)"/>
+            <ellipse cx="250" cy="250" rx="180" ry="75"
+                     transform="rotate(90 250 250)"/>
+            <circle cx="250" cy="250" r="150"/>
+            <circle cx="250" cy="250" r="95"/>
+          </g>
+
+          <g fill="none" stroke="#d1a171" stroke-width="1.5">
+            <path d="M97 323 Q170 130 260 250 T411 143"/>
+            <path d="M135 180 Q280 400 405 282"
+                  stroke-dasharray="5 8" opacity=".75"/>
+            <path d="M150 370 L250 250 L390 185" opacity=".65"/>
+          </g>
+
+          <g stroke="#e2b17f" stroke-width="1.3" fill="none">
+            <circle cx="97" cy="323" r="12"/>
+            <circle cx="260" cy="250" r="10"/>
+            <circle cx="411" cy="143" r="12"/>
+            <circle cx="390" cy="185" r="7"/>
+            <circle cx="150" cy="370" r="6"/>
+          </g>
+
+          <g fill="#f5c48e">
+            <circle cx="97" cy="323" r="4"/>
+            <circle cx="260" cy="250" r="5"/>
+            <circle cx="411" cy="143" r="4"/>
+            <circle cx="390" cy="185" r="3"/>
+            <circle cx="150" cy="370" r="3"/>
+          </g>
+
+          <g fill="#b2cdc2" font-family="Georgia,serif" font-size="16">
+            <text x="416" y="130">M</text>
+            <text x="270" y="241">x</text>
+            <text x="114" y="343">p</text>
+          </g>
+
+          <g fill="#d7a675" font-family="Georgia,serif" font-size="13">
+            <text x="290" y="420">SE(3)</text>
+            <text x="80" y="118">SO(3)</text>
+            <text x="350" y="350">&#8711;f(x)</text>
+          </g>
+        </svg>
+
+      </div>
+    </section>
+
+    <!-- About -->
+
+    <section class="content-section" id="about">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="eyebrow">01 / About Me</div>
+          <h2>Where geometry meets intelligence.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I am a <strong>Postdoctoral Scholar in Electrical
+              Engineering at the California Institute of
+              Technology (Caltech)</strong>, working with
+              Professor Babak Hassibi.
+            </p>
+
+            <p>
+              My research focuses on
+              <strong>AI-driven localization and navigation
+              in GPS-denied environments</strong>, with an
+              emphasis on state estimation, sensor fusion,
+              signal processing, and optimization on
+              Riemannian manifolds.
+            </p>
+
+            <p>
+              I earned my Ph.D. from
+              <strong>King Abdullah University of Science
+              and Technology (KAUST)</strong>, where my
+              doctoral research investigated precise ranging,
+              indoor localization, and motion tracking
+              using acoustic and inertial sensing.
+            </p>
+
+            <p>
+              Before my current appointment, I worked as
+              a Research Engineer at
+              <strong>Aramco Research Center</strong>,
+              developing localization and sensing technologies
+              for robotic inspection systems operating
+              in GPS-denied industrial environments.
+            </p>
+
+            <p>
+              My long-term research vision is to combine
+              rigorous mathematical methods with modern
+              machine learning to build autonomous systems
+              that are robust, trustworthy, and capable of
+              operating beyond ideal laboratory conditions.
+            </p>
+          </div>
+
+          <aside class="profile-card">
+            <h3>At a glance</h3>
+
+            <div class="profile-row">
+              <small>Current position</small>
+              <span>Postdoctoral Scholar</span>
+            </div>
+
+            <div class="profile-row">
+              <small>Institution</small>
+              <span>Caltech, Electrical Engineering</span>
+            </div>
+
+            <div class="profile-row">
+              <small>Doctoral institution</small>
+              <span>KAUST</span>
+            </div>
+
+            <div class="profile-row">
+              <small>Fellowship</small>
+              <span>Ibn Rushd Postdoctoral Fellowship</span>
+            </div>
+
+            <div class="profile-row">
+              <small>Research focus</small>
+              <span>AI for Autonomous Systems</span>
+            </div>
+
+            <div class="profile-row">
+              <small>Location</small>
+              <span>Pasadena, California, USA</span>
+            </div>
+          </aside>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Research -->
+
+    <section class="content-section soft-section" id="research">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="eyebrow">02 / Research</div>
+          <h2>Mathematics for intelligent autonomy.</h2>
+
+          <p>
+            My work combines model-based estimation,
+            geometric methods, signal processing,
+            and learning-based techniques to advance
+            perception and navigation.
+          </p>
+        </div>
+
+        <div class="research-grid">
+
+          <article class="research-card">
+            <div class="card-number">01.</div>
+            <h3>GPS-Denied Localization & Navigation</h3>
+            <p>
+              Developing reliable position and orientation
+              estimation methods for robots operating in
+              environments where satellite navigation is
+              unavailable or unreliable.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div class="card-number">02.</div>
+            <h3>Riemannian Optimization</h3>
+            <p>
+              Exploiting the intrinsic geometry of manifolds
+              and Lie groups to develop principled optimization
+              and estimation algorithms for constrained
+              state variables.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div class="card-number">03.</div>
+            <h3>Geometric Sensor Fusion</h3>
+            <p>
+              Combining inertial, acoustic, and complementary
+              measurements using filtering methods that
+              respect the geometric structure of position,
+              orientation, and pose.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div class="card-number">04.</div>
+            <h3>Learning-Enabled State Estimation</h3>
+            <p>
+              Investigating how machine learning can improve
+              adaptive filtering, uncertainty modeling,
+              and robust localization under changing
+              environmental conditions.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div class="card-number">05.</div>
+            <h3>Acoustic Sensing & Signal Processing</h3>
+            <p>
+              Designing high-precision ranging and localization
+              methods using coded acoustic waveforms,
+              Doppler-aware signal processing,
+              and statistical estimation.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div class="card-number">06.</div>
+            <h3>Autonomous Robotic Systems</h3>
+            <p>
+              Translating mathematical estimation and
+              sensing methods into practical robotic
+              applications, including industrial inspection
+              and navigation in challenging environments.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="research-note">
+          <div class="eyebrow">Research philosophy</div>
+          <h3 style="font-family:Georgia,serif;font-size:25px;
+                     margin:12px 0;">
+            From mathematical foundations to real-world impact.
+          </h3>
+          <p>
+            Reliable autonomy requires more than accurate
+            predictions. It requires an understanding of
+            physical constraints, system geometry, uncertainty,
+            and how sensing and learning interact in
+            complex environments.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Publications -->
+
+    <section class="content-section" id="publications">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="eyebrow">03 / Publications</div>
+          <h2>Selected scholarly work.</h2>
+          <p>
+            Research contributions spanning geometric
+            estimation, sensor fusion, and localization.
+            Full bibliographic details and publication
+            links can be added as they are verified.
+          </p>
+        </div>
+
+        <div class="publication">
+          <div class="pub-year">2025</div>
+          <div>
+            <h3>
+              Kalman Filtering for Indoor Pose Estimation
+              on Riemannian Manifolds Using IMU and Acoustics
+            </h3>
+            <p>EUSIPCO 2025</p>
+            <span class="pub-tag">Conference Paper</span>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="pub-year">Research</div>
+          <div>
+            <h3>
+              Kalman Filtering for Precise Indoor Position
+              and Orientation Estimation Using IMU and
+              Acoustics on Riemannian Manifolds
+            </h3>
+            <p>
+              Research manuscript on geometry-aware
+              multi-sensor state estimation.
+            </p>
+            <span class="pub-tag">Manuscript</span>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="pub-year">Ongoing</div>
+          <div>
+            <h3>
+              Kalman Filtering for Sensor Fusion with
+              Constrained State Variables via
+              Riemannian Optimization
+            </h3>
+            <p>
+              Investigation of constrained filtering
+              using the geometric structure of state spaces.
+            </p>
+            <span class="pub-tag">Research Direction</span>
+          </div>
+        </div>
+
+        <div class="publication">
+          <div class="pub-year">Ongoing</div>
+          <div>
+            <h3>
+              Cramér–Rao Bounds for Range Estimation
+              Using Discrete-Time Codes
+            </h3>
+            <p>
+              Statistical performance analysis
+              of coded ranging systems.
+            </p>
+            <span class="pub-tag">Research Direction</span>
+          </div>
+        </div>
+
+        <p style="font-size:12px;margin-top:25px;">
+          Note: This is a selected research overview,
+          not an exhaustive bibliographic record.
+          Publication statuses should be updated
+          before public release.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- Experience -->
+
+    <section class="content-section soft-section" id="experience">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="eyebrow">04 / Experience</div>
+          <h2>Research across academia and industry.</h2>
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-date">2024 — Present</div>
+            <h3>Postdoctoral Scholar, Electrical Engineering</h3>
+            <div class="timeline-org">
+              California Institute of Technology (Caltech)
+            </div>
+            <p>
+              Conducting research on geometric estimation,
+              sensor fusion, Riemannian optimization,
+              and AI for autonomous systems under the
+              mentorship of Professor Babak Hassibi.
+              Supported by the Ibn Rushd Postdoctoral
+              Fellowship.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Prior to 2024</div>
+            <h3>Research Engineer</h3>
+            <div class="timeline-org">
+              Aramco Research Center
+            </div>
+            <p>
+              Worked with the Intelligent Systems Sensing
+              and Robotics team on localization, orientation
+              estimation, and sensing for robotic inspection
+              systems operating in GPS-denied pipelines.
+              Contributed to award-recognized research
+              in robotic sensing and localization.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2020</div>
+            <h3>Visiting Scholar</h3>
+            <div class="timeline-org">
+              California Institute of Technology (Caltech)
+            </div>
+            <p>
+              Conducted research involving precise
+              indoor localization and optimization
+              on Riemannian manifolds.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Doctoral studies</div>
+            <h3>Ph.D. Researcher</h3>
+            <div class="timeline-org">
+              King Abdullah University of Science
+              and Technology (KAUST)
+            </div>
+            <p>
+              Studied ultrasonic ranging, acoustic
+              localization, Doppler-robust waveform
+              processing, inertial sensing,
+              and geometric optimization.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Teaching -->
+
+    <section class="content-section" id="teaching">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="eyebrow">05 / Teaching & Mentorship</div>
+          <h2>Sharing the mathematical foundations.</h2>
+          <p>
+            I am passionate about connecting rigorous
+            mathematical theory with practical problems
+            in signal processing, machine learning,
+            and robotics.
+          </p>
+        </div>
+
+        <div class="teaching-grid">
+
+          <div class="course-block">
+            <div class="eyebrow">Caltech · Fall 2026</div>
+
+            <h3>
+              Graduate Course in
+              Riemannian Manifold Methods
+            </h3>
+
+            <p>
+              Instructor of record for a graduate-level
+              course designed and taught independently,
+              with a focus on geometric methods relevant
+              to optimization and estimation.
+            </p>
+
+            <p>
+              California Institute of Technology<br>
+              Electrical Engineering
+            </p>
+          </div>
+
+          <div class="course-detail">
+            <h3>Topics covered</h3>
+
+            <div class="topic-list">
+              <span class="topic">Smooth Manifolds</span>
+              <span class="topic">Tangent Spaces</span>
+              <span class="topic">Cotangent Spaces</span>
+              <span class="topic">Riemannian Metrics</span>
+              <span class="topic">Gradient Methods</span>
+              <span class="topic">Retractions</span>
+              <span class="topic">Exponential Maps</span>
+              <span class="topic">Lie Groups</span>
+              <span class="topic">SO(3) and SE(3)</span>
+              <span class="topic">Fisher–Rao Geometry</span>
+              <span class="topic">Geometric Optimization</span>
+            </div>
+
+            <p>
+              My teaching approach emphasizes mathematical
+              intuition, clear proofs, and meaningful
+              connections to modern estimation and
+              optimization problems.
+            </p>
+
+            <h3 style="margin-top:27px;">Mentorship</h3>
+            <p>
+              Experience mentoring graduate-level research
+              and supporting students in the development
+              and communication of technical ideas.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+
+        <div>
+          <div class="eyebrow">06 / Contact</div>
+          <h2>Let's advance intelligent autonomy.</h2>
+          <p>
+            I welcome discussions about research
+            collaborations, academic opportunities,
+            and challenging problems in autonomous systems,
+            geometric optimization, and sensor fusion.
+          </p>
+
+          <div class="buttons">
+            <a class="btn btn-primary"
+               href="mailto:mohammed.alsharif@kaust.edu.sa">
+              Send an Email &nbsp; &#8594;
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-links">
+          <a class="contact-link"
+             href="mailto:mohammed.alsharif@kaust.edu.sa">
+            Email: mohammed.alsharif@kaust.edu.sa
+          </a>
+
+          <a class="contact-link"
+             href="https://github.com/AlSharif"
+             target="_blank" rel="noopener noreferrer">
+            GitHub: github.com/AlSharif
+          </a>
+
+          <a class="contact-link"
+             href="https://www.caltech.edu/"
+             target="_blank" rel="noopener noreferrer">
+            California Institute of Technology
+          </a>
+
+          <a class="contact-link"
+             href="https://www.kaust.edu.sa/"
+             target="_blank" rel="noopener noreferrer">
+            King Abdullah University of Science
+            and Technology
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        &copy; <span id="year">2026</span>
+        Mohammed AlSharif. All rights reserved.
+      </div>
+      <div>
+        Research &bull; Geometry &bull; Intelligence
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Update copyright year automatically
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Mobile navigation
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.textContent = isOpen ? "\u00D7" : "\u2630";
+    });
+
+    // Close mobile menu when a link is selected
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "\u2630";
+      });
+    });
+  </script>
+
+</body>
+</html>
